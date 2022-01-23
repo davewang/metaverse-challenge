@@ -9,10 +9,9 @@ function Login() {
             <Image className=" rounded-full" src='http://oss.iapploft.net/test1/3ic.png' width={200} height={200} objectFit="cover" />
 
             {/** login button  */}
-            <button onClick={authenticate} className=" bg-yellow-500 rounded-lg p-5 font-bold animate-pulse" >Login to the META</button>
+            <button className=" bg-yellow-500 rounded-lg p-5 font-bold animate-pulse" onClick={() => authenticate()}>Login to the META</button>
         </div>
         <div className=" w-full h-screen">
-            {/**http://links.papareact.com/55n?=2 http://oss.iapploft.net/assets/users/91155/post/origin/img/27d36390-7c47-11ec-97d2-0f791bc2cd2e.jpg?x-oss-process=image/resize,w_360 */}
             <Image src='http://oss.iapploft.net/test1/u55.jpeg' layout="fill" objectFit="cover" />
         </div>
     </div>;
