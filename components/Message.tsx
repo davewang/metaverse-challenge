@@ -1,8 +1,10 @@
 import { useMoralis } from "react-moralis";
 import Avatar from "./Avatar";
 import TimeaAgo from "timeago-react"
-
-function Message({ message }) {
+interface Props {
+    message: any,
+}
+function Message({ message }: Props) {
     const { user } = useMoralis();
     const isUserMessage = message.get("ethAddress") == user?.get("ethAddress");
     return <div className={`flex items-end space-x-2 relative ${isUserMessage

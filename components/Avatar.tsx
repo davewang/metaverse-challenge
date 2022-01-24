@@ -1,7 +1,10 @@
 import { useMoralis } from "react-moralis";
 import Image from "next/image";
-
-function Avatar({ username, logoutOnPress }) {
+interface Props {
+    username?: string | undefined,
+    logoutOnPress?: Function | undefined,
+}
+function Avatar({ username, logoutOnPress }: Props) {
     const { user, logout } = useMoralis();
 
     return <Image

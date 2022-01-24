@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { useMoralis } from 'react-moralis';
-
-function SendMessage({ endOfMessagesRef }) {
+interface Props {
+    endOfMessagesRef: any,
+}
+function SendMessage({ endOfMessagesRef }: Props) {
     const { user, Moralis } = useMoralis();
     const [message, setMessage] = useState("")
 
-    const sendMessage = (e) => {
+    const sendMessage = (e: any) => {
         e.preventDefault();
         if (!message) return;
         const Messages = Moralis.Object.extend("Messages")
@@ -14,9 +16,9 @@ function SendMessage({ endOfMessagesRef }) {
             message,
             username: user?.getUsername(),
             ethAddress: user?.get("ethAddress"),
-        }).then((message) => {
+        }).then((message: any) => {
 
-        }, (error) => { });
+        }, (error: any) => { });
         endOfMessagesRef.current.scrollIntoView({ behavior: "smooth" });
         setMessage("");
 

@@ -6,7 +6,7 @@ const MINS_DURATION = 15;
 function Messages() {
     const { user } = useMoralis();
     const endOfMessagesRef = useRef(null);
-    const { data, loading, error } = useMoralisQuery(
+    const { data, error } = useMoralisQuery(
         "Messages",
         (query) => query.ascending('createdAt')
             .greaterThan('createdAt',

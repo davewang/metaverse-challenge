@@ -12,7 +12,7 @@ function Header() {
             <div className=" col-span-4 text-left lg:text-center">
 
                 <div className="relative w-48 h-48 lg:mx-auto border-pink-500 border-8 rounded-full">
-                    <Avatar logoutOnPress></Avatar>
+                    <Avatar />
 
                 </div>
                 <h1 className="text-3xl">欢迎来到源宇宙</h1>
